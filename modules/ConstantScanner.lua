@@ -30,7 +30,7 @@ local function scan(query)
     local constants = {}
 
     for _i, closure in pairs(getGc()) do
-        if type(closure) == "function" and not isXClosure(closure) and isLClosure(closure) and not constants[closure] then
+        if type(closure) == "function" and isLClosure(closure) and not constants[closure] then
             for index, constant in pairs(getConstants(closure)) do
                 if compareConstant(query, constant) then
                     local storage = constants[closure]
