@@ -15,7 +15,7 @@ local function scan(query)
     query = query or ""
 
     for _i, v in pairs(getGc()) do
-        if type(v) == "function" and not isXClosure(v) then
+        if type(v) == "function" then
             local script = rawget(getfenv(v), "script")
 
             if typeof(script) == "Instance" and 
