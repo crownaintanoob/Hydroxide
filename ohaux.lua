@@ -32,7 +32,7 @@ local function searchClosure(script, name, upvalueIndex, constants)
         local parentScript = rawget(getfenv(v), "script")
 
         if type(v) == "function" and 
-            isLClosure(v) and 
+            isLClosure(v) 
             --[[not isXClosure(v)--]] and 
             (
                 (script == nil and parentScript.Parent == nil) or script == parentScript
