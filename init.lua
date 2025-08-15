@@ -1,3 +1,4 @@
+print("test|!"
 local environment = assert(getgenv, "<OH> ~ Your exploit is not supported")()
 
 if oh then
