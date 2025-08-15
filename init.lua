@@ -1,4 +1,4 @@
-print("test|!")
+print("test|wg!")
 local environment = assert(getgenv, "<OH> ~ Your exploit is not supported")()
 
 if oh then
